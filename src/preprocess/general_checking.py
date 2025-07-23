@@ -54,6 +54,34 @@ class GeneralChecker:
                 rankings.append('Trung bình')
 
         self.df[new_col] = rankings
+        self.df['last_semester_student_ranking'] = self.df[new_col]
+        self.df.drop(columns=new_col, inplace=True, axis=1)
+
+    @staticmethod
+    def convert_float_to_object(df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Chuyển các cột có kiểu float64 trong DataFrame sang kiểu object (tương tự string).
+        
+        Args:
+            df (pd.DataFrame): DataFrame đầu vào.
+
+        Returns:
+            pd.DataFrame: DataFrame đã chuyển kiểu dữ liệu.
+        """
+        float_columns = df.select_dtypes(include=['float64']).columns
+        df[float_columns] = df[float_columns].astype('object')
+        return df
+
+
+    def do_all_checks(self):
+        """Run all checks and transformations."""
+        print("🔍 Null Checks:\n", self.check_null())
+        print("🔍 Data Types:\n", self.check_datatype())
+        self.convert_gpa_range()
+        self.remove_timestamp()
+        self.classify_student_ranking()
+        self.df = self.convert_float_to_object(self.df)
+        return self.df
 
     def get_dataframe(self):
         """Return the processed DataFrame."""
