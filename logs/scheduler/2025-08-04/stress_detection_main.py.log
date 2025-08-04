@@ -1,0 +1,67 @@
+[2025-08-04T12:13:42.254+0700] {processor.py:161} INFO - Started process (PID=7439) to work on /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:13:42.255+0700] {processor.py:830} INFO - Processing file /opt/airflow/dags/stress_detection_main.py for tasks to queue
+[2025-08-04T12:13:42.258+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:13:42.257+0700] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:13:42.296+0700] {processor.py:840} INFO - DAG(s) 'stress_detection_main_preprocess' retrieved from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:13:42.407+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:13:42.406+0700] {override.py:1829} INFO - Created Permission View: can read on DAG:stress_detection_main_preprocess
+[2025-08-04T12:13:42.418+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:13:42.418+0700] {override.py:1829} INFO - Created Permission View: can delete on DAG:stress_detection_main_preprocess
+[2025-08-04T12:13:42.426+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:13:42.425+0700] {override.py:1829} INFO - Created Permission View: can edit on DAG:stress_detection_main_preprocess
+[2025-08-04T12:13:42.427+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:13:42.426+0700] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-04T12:13:42.438+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:13:42.437+0700] {dag.py:3118} INFO - Creating ORM DAG for stress_detection_main_preprocess
+[2025-08-04T12:13:42.439+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:13:42.439+0700] {dag.py:3954} INFO - Setting next_dagrun for stress_detection_main_preprocess to None, run_after=None
+[2025-08-04T12:13:42.465+0700] {processor.py:183} INFO - Processing /opt/airflow/dags/stress_detection_main.py took 0.216 seconds
+[2025-08-04T12:14:12.577+0700] {processor.py:161} INFO - Started process (PID=7459) to work on /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:14:12.578+0700] {processor.py:830} INFO - Processing file /opt/airflow/dags/stress_detection_main.py for tasks to queue
+[2025-08-04T12:14:12.580+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:14:12.580+0700] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:14:12.600+0700] {processor.py:840} INFO - DAG(s) 'stress_detection_main_preprocess' retrieved from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:14:12.621+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:14:12.621+0700] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-04T12:14:12.634+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:14:12.634+0700] {dag.py:3954} INFO - Setting next_dagrun for stress_detection_main_preprocess to None, run_after=None
+[2025-08-04T12:14:12.650+0700] {processor.py:183} INFO - Processing /opt/airflow/dags/stress_detection_main.py took 0.078 seconds
+[2025-08-04T12:14:43.088+0700] {processor.py:161} INFO - Started process (PID=7479) to work on /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:14:43.089+0700] {processor.py:830} INFO - Processing file /opt/airflow/dags/stress_detection_main.py for tasks to queue
+[2025-08-04T12:14:43.091+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:14:43.091+0700] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:14:43.114+0700] {processor.py:840} INFO - DAG(s) 'stress_detection_main_preprocess' retrieved from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:14:43.140+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:14:43.140+0700] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-04T12:14:43.152+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:14:43.152+0700] {dag.py:3954} INFO - Setting next_dagrun for stress_detection_main_preprocess to None, run_after=None
+[2025-08-04T12:14:43.178+0700] {processor.py:183} INFO - Processing /opt/airflow/dags/stress_detection_main.py took 0.094 seconds
+[2025-08-04T12:15:07.732+0700] {processor.py:161} INFO - Started process (PID=7502) to work on /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:15:07.733+0700] {processor.py:830} INFO - Processing file /opt/airflow/dags/stress_detection_main.py for tasks to queue
+[2025-08-04T12:15:07.735+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:15:07.735+0700] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:15:07.774+0700] {processor.py:840} INFO - DAG(s) 'stress_detection_main_preprocess' retrieved from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:15:07.808+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:15:07.808+0700] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-04T12:15:07.821+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:15:07.821+0700] {dag.py:3954} INFO - Setting next_dagrun for stress_detection_main_preprocess to None, run_after=None
+[2025-08-04T12:15:07.847+0700] {processor.py:183} INFO - Processing /opt/airflow/dags/stress_detection_main.py took 0.123 seconds
+[2025-08-04T12:15:38.295+0700] {processor.py:161} INFO - Started process (PID=7517) to work on /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:15:38.296+0700] {processor.py:830} INFO - Processing file /opt/airflow/dags/stress_detection_main.py for tasks to queue
+[2025-08-04T12:15:38.299+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:15:38.299+0700] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:15:38.331+0700] {processor.py:840} INFO - DAG(s) 'stress_detection_main_preprocess' retrieved from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:15:38.359+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:15:38.358+0700] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-04T12:15:38.369+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:15:38.369+0700] {dag.py:3954} INFO - Setting next_dagrun for stress_detection_main_preprocess to None, run_after=None
+[2025-08-04T12:15:38.387+0700] {processor.py:183} INFO - Processing /opt/airflow/dags/stress_detection_main.py took 0.099 seconds
+[2025-08-04T12:16:08.902+0700] {processor.py:161} INFO - Started process (PID=7537) to work on /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:16:08.904+0700] {processor.py:830} INFO - Processing file /opt/airflow/dags/stress_detection_main.py for tasks to queue
+[2025-08-04T12:16:08.906+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:16:08.906+0700] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:16:08.942+0700] {processor.py:840} INFO - DAG(s) 'stress_detection_main_preprocess' retrieved from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:16:08.980+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:16:08.979+0700] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-04T12:16:08.993+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:16:08.993+0700] {dag.py:3954} INFO - Setting next_dagrun for stress_detection_main_preprocess to None, run_after=None
+[2025-08-04T12:16:09.013+0700] {processor.py:183} INFO - Processing /opt/airflow/dags/stress_detection_main.py took 0.117 seconds
+[2025-08-04T12:16:39.558+0700] {processor.py:161} INFO - Started process (PID=7557) to work on /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:16:39.559+0700] {processor.py:830} INFO - Processing file /opt/airflow/dags/stress_detection_main.py for tasks to queue
+[2025-08-04T12:16:39.562+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:16:39.561+0700] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:16:39.594+0700] {processor.py:840} INFO - DAG(s) 'stress_detection_main_preprocess' retrieved from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:16:39.624+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:16:39.624+0700] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-04T12:16:39.637+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:16:39.637+0700] {dag.py:3954} INFO - Setting next_dagrun for stress_detection_main_preprocess to None, run_after=None
+[2025-08-04T12:16:39.663+0700] {processor.py:183} INFO - Processing /opt/airflow/dags/stress_detection_main.py took 0.111 seconds
+[2025-08-04T12:17:10.189+0700] {processor.py:161} INFO - Started process (PID=7577) to work on /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:17:10.190+0700] {processor.py:830} INFO - Processing file /opt/airflow/dags/stress_detection_main.py for tasks to queue
+[2025-08-04T12:17:10.192+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:17:10.192+0700] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:17:10.220+0700] {processor.py:840} INFO - DAG(s) 'stress_detection_main_preprocess' retrieved from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:17:10.255+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:17:10.255+0700] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-04T12:17:10.271+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:17:10.271+0700] {dag.py:3954} INFO - Setting next_dagrun for stress_detection_main_preprocess to None, run_after=None
+[2025-08-04T12:17:10.297+0700] {processor.py:183} INFO - Processing /opt/airflow/dags/stress_detection_main.py took 0.113 seconds
+[2025-08-04T12:17:40.784+0700] {processor.py:161} INFO - Started process (PID=7597) to work on /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:17:40.785+0700] {processor.py:830} INFO - Processing file /opt/airflow/dags/stress_detection_main.py for tasks to queue
+[2025-08-04T12:17:40.786+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:17:40.786+0700] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:17:40.821+0700] {processor.py:840} INFO - DAG(s) 'stress_detection_main_preprocess' retrieved from /opt/airflow/dags/stress_detection_main.py
+[2025-08-04T12:17:40.849+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:17:40.849+0700] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-04T12:17:40.861+0700] {logging_mixin.py:188} INFO - [2025-08-04T12:17:40.861+0700] {dag.py:3954} INFO - Setting next_dagrun for stress_detection_main_preprocess to None, run_after=None
+[2025-08-04T12:17:40.879+0700] {processor.py:183} INFO - Processing /opt/airflow/dags/stress_detection_main.py took 0.100 seconds

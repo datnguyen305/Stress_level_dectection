@@ -1,0 +1,48 @@
+[2025-08-03T23:24:04.131+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-03T23:24:04.157+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stress_level_detection_pipeline.preprocess_data manual__2025-08-03T16:24:03.210290+00:00 [queued]>
+[2025-08-03T23:24:04.163+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stress_level_detection_pipeline.preprocess_data manual__2025-08-03T16:24:03.210290+00:00 [queued]>
+[2025-08-03T23:24:04.164+0700] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-08-03T23:24:04.174+0700] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): preprocess_data> on 2025-08-03 16:24:03.210290+00:00
+[2025-08-03T23:24:04.178+0700] {standard_task_runner.py:63} INFO - Started process 185 to run task
+[2025-08-03T23:24:04.182+0700] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'stress_level_detection_pipeline', 'preprocess_data', 'manual__2025-08-03T16:24:03.210290+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/stress_detection_dag.py', '--cfg-path', '/tmp/tmp4z2kstlf']
+[2025-08-03T23:24:04.185+0700] {standard_task_runner.py:91} INFO - Job 3: Subtask preprocess_data
+[2025-08-03T23:24:04.254+0700] {task_command.py:426} INFO - Running <TaskInstance: stress_level_detection_pipeline.preprocess_data manual__2025-08-03T16:24:03.210290+00:00 [running]> on host 8f064ec48114
+[2025-08-03T23:24:04.327+0700] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stress_level_detection_pipeline' AIRFLOW_CTX_TASK_ID='preprocess_data' AIRFLOW_CTX_EXECUTION_DATE='2025-08-03T16:24:03.210290+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-03T16:24:03.210290+00:00'
+[2025-08-03T23:24:04.329+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-03T23:24:04.476+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-03T23:24:04.477+0700] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/stress_detection_dag.py", line 12, in preprocess_data
+    df = pd.read_excel(input_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/io/excel/_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/io/excel/_base.py", line 1567, in __init__
+    self._reader = self._engines[engine](
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/io/excel/_openpyxl.py", line 552, in __init__
+    import_optional_dependency("openpyxl")
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/compat/_optional.py", line 164, in import_optional_dependency
+    raise ImportError(msg)
+ImportError: Pandas requires version '3.1.0' or newer of 'openpyxl' (version '3.0.10' currently installed).
+[2025-08-03T23:24:04.493+0700] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=stress_level_detection_pipeline, task_id=preprocess_data, run_id=manual__2025-08-03T16:24:03.210290+00:00, execution_date=20250803T162403, start_date=20250803T162404, end_date=20250803T162404
+[2025-08-03T23:24:04.509+0700] {standard_task_runner.py:110} ERROR - Failed to execute job 3 for task preprocess_data (Pandas requires version '3.1.0' or newer of 'openpyxl' (version '3.0.10' currently installed).; 185)
+[2025-08-03T23:24:04.556+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-03T23:24:04.571+0700] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-03T23:24:04.574+0700] {local_task_job_runner.py:222} INFO - ::endgroup::

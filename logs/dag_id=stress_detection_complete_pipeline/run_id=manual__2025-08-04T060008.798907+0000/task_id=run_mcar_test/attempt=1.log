@@ -1,0 +1,24 @@
+[2025-08-04T13:00:48.637+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-04T13:00:48.659+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.run_mcar_test manual__2025-08-04T06:00:08.798907+00:00 [queued]>
+[2025-08-04T13:00:48.666+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.run_mcar_test manual__2025-08-04T06:00:08.798907+00:00 [queued]>
+[2025-08-04T13:00:48.667+0700] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-04T13:00:48.677+0700] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): run_mcar_test> on 2025-08-04 06:00:08.798907+00:00
+[2025-08-04T13:00:48.682+0700] {standard_task_runner.py:63} INFO - Started process 382 to run task
+[2025-08-04T13:00:48.684+0700] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'stress_detection_complete_pipeline', 'run_mcar_test', 'manual__2025-08-04T06:00:08.798907+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/stress_detection_complete_pipeline.py', '--cfg-path', '/tmp/tmp58jnt9e1']
+[2025-08-04T13:00:48.686+0700] {standard_task_runner.py:91} INFO - Job 17: Subtask run_mcar_test
+[2025-08-04T13:00:48.761+0700] {task_command.py:426} INFO - Running <TaskInstance: stress_detection_complete_pipeline.run_mcar_test manual__2025-08-04T06:00:08.798907+00:00 [running]> on host 16f3fd804e12
+[2025-08-04T13:00:48.833+0700] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='stress_detection_complete_pipeline' AIRFLOW_CTX_TASK_ID='run_mcar_test' AIRFLOW_CTX_EXECUTION_DATE='2025-08-04T06:00:08.798907+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-04T06:00:08.798907+00:00'
+[2025-08-04T13:00:48.835+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-04T13:00:49.510+0700] {logging_mixin.py:188} INFO - 🔎 Running MCAR test...
+[2025-08-04T13:00:49.532+0700] {logging_mixin.py:188} INFO - ✅ MCAR test finished.
+[2025-08-04T13:00:49.533+0700] {logging_mixin.py:188} INFO - 📊 MCAR Test Result: Chi2=0.0, df=2, p-value=1.0
+[2025-08-04T13:00:49.533+0700] {logging_mixin.py:188} INFO - 📊 Preview of final DataFrame:
+[2025-08-04T13:00:49.534+0700] {logging_mixin.py:188} INFO - ['80-89' '90-100' '65-79' '50-64' '<50']
+[2025-08-04T13:00:49.542+0700] {logging_mixin.py:188} INFO - Data saved to /opt/***/data/processed_data.csv
+[2025-08-04T13:00:49.542+0700] {logging_mixin.py:188} INFO - ✅ Data saved successfully.
+[2025-08-04T13:00:49.543+0700] {python.py:237} INFO - Done. Returned value was: None
+[2025-08-04T13:00:49.544+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-04T13:00:49.554+0700] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=stress_detection_complete_pipeline, task_id=run_mcar_test, run_id=manual__2025-08-04T06:00:08.798907+00:00, execution_date=20250804T060008, start_date=20250804T060048, end_date=20250804T060049
+[2025-08-04T13:00:49.596+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-04T13:00:49.621+0700] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-04T13:00:49.624+0700] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,42 @@
+[2025-08-04T12:55:47.654+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-04T12:55:47.680+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.retrieve_data_from_drive manual__2025-08-04T05:55:44.236284+00:00 [queued]>
+[2025-08-04T12:55:47.687+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.retrieve_data_from_drive manual__2025-08-04T05:55:44.236284+00:00 [queued]>
+[2025-08-04T12:55:47.688+0700] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-04T12:55:47.703+0700] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): retrieve_data_from_drive> on 2025-08-04 05:55:44.236284+00:00
+[2025-08-04T12:55:47.710+0700] {standard_task_runner.py:63} INFO - Started process 220 to run task
+[2025-08-04T12:55:47.713+0700] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'stress_detection_complete_pipeline', 'retrieve_data_from_drive', 'manual__2025-08-04T05:55:44.236284+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/stress_detection_complete_pipeline.py', '--cfg-path', '/tmp/tmpwfdizsbm']
+[2025-08-04T12:55:47.716+0700] {standard_task_runner.py:91} INFO - Job 3: Subtask retrieve_data_from_drive
+[2025-08-04T12:55:47.831+0700] {task_command.py:426} INFO - Running <TaskInstance: stress_detection_complete_pipeline.retrieve_data_from_drive manual__2025-08-04T05:55:44.236284+00:00 [running]> on host 4f20e31bd437
+[2025-08-04T12:55:47.921+0700] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='stress_detection_complete_pipeline' AIRFLOW_CTX_TASK_ID='retrieve_data_from_drive' AIRFLOW_CTX_EXECUTION_DATE='2025-08-04T05:55:44.236284+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-04T05:55:44.236284+00:00'
+[2025-08-04T12:55:47.923+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-04T12:55:48.853+0700] {logging_mixin.py:188} INFO - 📥 Retrieving data from Google Drive...
+[2025-08-04T12:55:48.854+0700] {logging_mixin.py:188} INFO - Using FILE_ID: 1YyS7hGa4C...
+[2025-08-04T12:55:48.856+0700] {logging_mixin.py:188} INFO - An error occurred while retrieving data: [Errno 2] No such file or directory: '1YyS7hGa4CMlfnjHt9BgwzSv6UJfekvYvdc3EJt4F2Bo'
+[2025-08-04T12:55:48.856+0700] {logging_mixin.py:188} INFO - ✅ Data retrieved successfully.
+[2025-08-04T12:55:48.857+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-04T12:55:48.858+0700] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/stress_detection_complete_pipeline.py", line 34, in retrieve_data_from_drive
+    data.to_csv('/opt/airflow/data/temp_raw_data.csv', index=False)
+    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'to_csv'
+[2025-08-04T12:55:48.878+0700] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=stress_detection_complete_pipeline, task_id=retrieve_data_from_drive, run_id=manual__2025-08-04T05:55:44.236284+00:00, execution_date=20250804T055544, start_date=20250804T055547, end_date=20250804T055548
+[2025-08-04T12:55:48.896+0700] {standard_task_runner.py:110} ERROR - Failed to execute job 3 for task retrieve_data_from_drive ('NoneType' object has no attribute 'to_csv'; 220)
+[2025-08-04T12:55:48.934+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-04T12:55:48.952+0700] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-04T12:55:48.956+0700] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,18 @@
+[2025-08-04T07:06:35.543+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-04T07:06:35.593+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stress_level_detection_pipeline.preprocess_data manual__2025-08-04T00:06:33.923260+00:00 [queued]>
+[2025-08-04T07:06:35.600+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stress_level_detection_pipeline.preprocess_data manual__2025-08-04T00:06:33.923260+00:00 [queued]>
+[2025-08-04T07:06:35.601+0700] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-08-04T07:06:35.612+0700] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): preprocess_data> on 2025-08-04 00:06:33.923260+00:00
+[2025-08-04T07:06:35.621+0700] {standard_task_runner.py:63} INFO - Started process 771 to run task
+[2025-08-04T07:06:35.624+0700] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'stress_level_detection_pipeline', 'preprocess_data', 'manual__2025-08-04T00:06:33.923260+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/stress_detection_dag.py', '--cfg-path', '/tmp/tmpe3uw67oz']
+[2025-08-04T07:06:35.626+0700] {standard_task_runner.py:91} INFO - Job 3: Subtask preprocess_data
+[2025-08-04T07:06:35.692+0700] {task_command.py:426} INFO - Running <TaskInstance: stress_level_detection_pipeline.preprocess_data manual__2025-08-04T00:06:33.923260+00:00 [running]> on host 3aa7e2ee8270
+[2025-08-04T07:06:35.768+0700] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stress_level_detection_pipeline' AIRFLOW_CTX_TASK_ID='preprocess_data' AIRFLOW_CTX_EXECUTION_DATE='2025-08-04T00:06:33.923260+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-04T00:06:33.923260+00:00'
+[2025-08-04T07:06:35.769+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-04T07:06:36.081+0700] {logging_mixin.py:188} INFO - ✅ Đã lưu: /opt/***/data/processed_data.csv
+[2025-08-04T07:06:36.082+0700] {python.py:237} INFO - Done. Returned value was: None
+[2025-08-04T07:06:36.082+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-04T07:06:36.090+0700] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=stress_level_detection_pipeline, task_id=preprocess_data, run_id=manual__2025-08-04T00:06:33.923260+00:00, execution_date=20250804T000633, start_date=20250804T000635, end_date=20250804T000636
+[2025-08-04T07:06:36.119+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-04T07:06:36.134+0700] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-04T07:06:36.136+0700] {local_task_job_runner.py:222} INFO - ::endgroup::

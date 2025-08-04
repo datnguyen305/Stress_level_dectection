@@ -1,0 +1,65 @@
+[2025-08-04T13:00:32.677+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-04T13:00:32.704+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.check_data_integrity manual__2025-08-04T05:55:44.236284+00:00 [queued]>
+[2025-08-04T13:00:32.711+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.check_data_integrity manual__2025-08-04T05:55:44.236284+00:00 [queued]>
+[2025-08-04T13:00:32.712+0700] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-04T13:00:32.726+0700] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_data_integrity> on 2025-08-04 05:55:44.236284+00:00
+[2025-08-04T13:00:32.731+0700] {standard_task_runner.py:63} INFO - Started process 259 to run task
+[2025-08-04T13:00:32.736+0700] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'stress_detection_complete_pipeline', 'check_data_integrity', 'manual__2025-08-04T05:55:44.236284+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/stress_detection_complete_pipeline.py', '--cfg-path', '/tmp/tmpj8g4jlud']
+[2025-08-04T13:00:32.741+0700] {standard_task_runner.py:91} INFO - Job 8: Subtask check_data_integrity
+[2025-08-04T13:00:32.837+0700] {task_command.py:426} INFO - Running <TaskInstance: stress_detection_complete_pipeline.check_data_integrity manual__2025-08-04T05:55:44.236284+00:00 [running]> on host 16f3fd804e12
+[2025-08-04T13:00:32.937+0700] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='stress_detection_complete_pipeline' AIRFLOW_CTX_TASK_ID='check_data_integrity' AIRFLOW_CTX_EXECUTION_DATE='2025-08-04T05:55:44.236284+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-04T05:55:44.236284+00:00'
+[2025-08-04T13:00:32.939+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-04T13:00:33.720+0700] {logging_mixin.py:188} INFO - 🧪 Checking general data integrity...
+[2025-08-04T13:00:33.732+0700] {logging_mixin.py:188} INFO - 🔍 Null Checks:
+[2025-08-04T13:00:33.734+0700] {logging_mixin.py:188} INFO -  time_stamp                            0
+gender                                0
+academic_year                         0
+major                                 0
+class_attendance_percent              0
+last_semester_GPA                     0
+conduct_score                         0
+last_semester_student_ranking         0
+self_study_hours                      0
+activity_engagement_level             0
+internet_adaptation                   0
+amount_hours_spent_on_social_media    0
+average_time_spent_sleeping           0
+workout_rate                          0
+peer_pressure_rate                    0
+sharing_frequency                     0
+family_affects                        0
+family_allowance_sufficiency          0
+family_educational_level              3
+family_major_support                  0
+target                                0
+dtype: int64
+[2025-08-04T13:00:33.735+0700] {logging_mixin.py:188} INFO - 🔍 Data Types:
+[2025-08-04T13:00:33.737+0700] {logging_mixin.py:188} INFO -  time_stamp                             object
+gender                                 object
+academic_year                           int64
+major                                  object
+class_attendance_percent               object
+last_semester_GPA                      object
+conduct_score                          object
+last_semester_student_ranking          object
+self_study_hours                       object
+activity_engagement_level               int64
+internet_adaptation                     int64
+amount_hours_spent_on_social_media     object
+average_time_spent_sleeping            object
+workout_rate                            int64
+peer_pressure_rate                      int64
+sharing_frequency                       int64
+family_affects                          int64
+family_allowance_sufficiency            int64
+family_educational_level              float64
+family_major_support                    int64
+target                                  int64
+dtype: object
+[2025-08-04T13:00:33.751+0700] {logging_mixin.py:188} INFO - ✅ Data integrity check completed.
+[2025-08-04T13:00:33.762+0700] {python.py:237} INFO - Done. Returned value was: None
+[2025-08-04T13:00:33.762+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-04T13:00:33.774+0700] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=stress_detection_complete_pipeline, task_id=check_data_integrity, run_id=manual__2025-08-04T05:55:44.236284+00:00, execution_date=20250804T055544, start_date=20250804T060032, end_date=20250804T060033
+[2025-08-04T13:00:33.798+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-04T13:00:33.818+0700] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-04T13:00:33.822+0700] {local_task_job_runner.py:222} INFO - ::endgroup::

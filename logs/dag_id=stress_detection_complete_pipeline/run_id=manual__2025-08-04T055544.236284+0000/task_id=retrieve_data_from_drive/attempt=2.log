@@ -1,0 +1,20 @@
+[2025-08-04T13:00:25.271+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-04T13:00:25.300+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.retrieve_data_from_drive manual__2025-08-04T05:55:44.236284+00:00 [queued]>
+[2025-08-04T13:00:25.308+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.retrieve_data_from_drive manual__2025-08-04T05:55:44.236284+00:00 [queued]>
+[2025-08-04T13:00:25.309+0700] {taskinstance.py:2306} INFO - Starting attempt 2 of 4
+[2025-08-04T13:00:25.320+0700] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): retrieve_data_from_drive> on 2025-08-04 05:55:44.236284+00:00
+[2025-08-04T13:00:25.325+0700] {standard_task_runner.py:63} INFO - Started process 220 to run task
+[2025-08-04T13:00:25.328+0700] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'stress_detection_complete_pipeline', 'retrieve_data_from_drive', 'manual__2025-08-04T05:55:44.236284+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/stress_detection_complete_pipeline.py', '--cfg-path', '/tmp/tmpzofflcpg']
+[2025-08-04T13:00:25.330+0700] {standard_task_runner.py:91} INFO - Job 5: Subtask retrieve_data_from_drive
+[2025-08-04T13:00:25.416+0700] {task_command.py:426} INFO - Running <TaskInstance: stress_detection_complete_pipeline.retrieve_data_from_drive manual__2025-08-04T05:55:44.236284+00:00 [running]> on host 16f3fd804e12
+[2025-08-04T13:00:25.499+0700] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='stress_detection_complete_pipeline' AIRFLOW_CTX_TASK_ID='retrieve_data_from_drive' AIRFLOW_CTX_EXECUTION_DATE='2025-08-04T05:55:44.236284+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-04T05:55:44.236284+00:00'
+[2025-08-04T13:00:25.501+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-04T13:00:25.521+0700] {logging_mixin.py:188} INFO - 📥 Loading data from local file...
+[2025-08-04T13:00:26.011+0700] {logging_mixin.py:188} INFO - ✅ Data loaded successfully. Shape: (290, 30)
+[2025-08-04T13:00:26.047+0700] {logging_mixin.py:188} INFO - 📄 Data saved to temporary CSV file.
+[2025-08-04T13:00:26.048+0700] {python.py:237} INFO - Done. Returned value was: /opt/***/data/temp_raw_data.csv
+[2025-08-04T13:00:26.049+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-04T13:00:26.090+0700] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=stress_detection_complete_pipeline, task_id=retrieve_data_from_drive, run_id=manual__2025-08-04T05:55:44.236284+00:00, execution_date=20250804T055544, start_date=20250804T060025, end_date=20250804T060026
+[2025-08-04T13:00:26.145+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-04T13:00:26.166+0700] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-04T13:00:26.173+0700] {local_task_job_runner.py:222} INFO - ::endgroup::

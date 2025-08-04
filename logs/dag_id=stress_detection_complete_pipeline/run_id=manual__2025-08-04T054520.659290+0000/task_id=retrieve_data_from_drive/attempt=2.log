@@ -1,0 +1,202 @@
+[2025-08-04T12:50:24.496+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-04T12:50:24.523+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.retrieve_data_from_drive manual__2025-08-04T05:45:20.659290+00:00 [queued]>
+[2025-08-04T12:50:24.530+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.retrieve_data_from_drive manual__2025-08-04T05:45:20.659290+00:00 [queued]>
+[2025-08-04T12:50:24.532+0700] {taskinstance.py:2306} INFO - Starting attempt 2 of 3
+[2025-08-04T12:50:24.542+0700] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): retrieve_data_from_drive> on 2025-08-04 05:45:20.659290+00:00
+[2025-08-04T12:50:24.547+0700] {standard_task_runner.py:63} INFO - Started process 222 to run task
+[2025-08-04T12:50:24.550+0700] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'stress_detection_complete_pipeline', 'retrieve_data_from_drive', 'manual__2025-08-04T05:45:20.659290+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/stress_detection_complete_pipeline.py', '--cfg-path', '/tmp/tmpjq135lg6']
+[2025-08-04T12:50:24.552+0700] {standard_task_runner.py:91} INFO - Job 5: Subtask retrieve_data_from_drive
+[2025-08-04T12:50:24.631+0700] {task_command.py:426} INFO - Running <TaskInstance: stress_detection_complete_pipeline.retrieve_data_from_drive manual__2025-08-04T05:45:20.659290+00:00 [running]> on host 7aea066467c1
+[2025-08-04T12:50:24.723+0700] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='stress_detection_complete_pipeline' AIRFLOW_CTX_TASK_ID='retrieve_data_from_drive' AIRFLOW_CTX_EXECUTION_DATE='2025-08-04T05:45:20.659290+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-04T05:45:20.659290+00:00'
+[2025-08-04T12:50:24.725+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-04T12:50:27.830+0700] {logging_mixin.py:188} WARNING - 
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.11/site-packages/***/__main__.py", line 58, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/utils/cli.py", line 114, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/commands/scheduler_command.py", line 58, in scheduler
+    run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/commands/daemon_utils.py", line 85, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/commands/scheduler_command.py", line 61, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/commands/scheduler_command.py", line 49, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.11/site-packages/***/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/jobs/job.py", line 402, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.11/site-packages/***/jobs/job.py", line 431, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.11/site-packages/***/jobs/scheduler_job_runner.py", line 834, in _execute
+    self.job.executor.start()
+  File "/home/***/.local/lib/python3.11/site-packages/***/executors/local_executor.py", line 373, in start
+    self.impl.start()
+  File "/home/***/.local/lib/python3.11/site-packages/***/executors/local_executor.py", line 312, in start
+    worker.start()
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/local/lib/python3.11/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/local/lib/python3.11/multiprocessing/context.py", line 281, in _Popen
+    return Popen(process_obj)
+  File "/usr/local/lib/python3.11/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/local/lib/python3.11/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.11/site-packages/***/executors/local_executor.py", line 78, in run
+    return super().run()
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/executors/local_executor.py", line 202, in do_work
+    self.execute_work(key=key, command=command)
+  File "/home/***/.local/lib/python3.11/site-packages/***/executors/local_executor.py", line 95, in execute_work
+    state = self._execute_work_in_fork(command)
+  File "/home/***/.local/lib/python3.11/site-packages/***/executors/local_executor.py", line 135, in _execute_work_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/utils/cli.py", line 114, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/commands/task_command.py", line 441, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/commands/task_command.py", line 219, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/commands/task_command.py", line 281, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.11/site-packages/***/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/jobs/job.py", line 402, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.11/site-packages/***/jobs/job.py", line 431, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.11/site-packages/***/jobs/local_task_job_runner.py", line 168, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.11/site-packages/***/task/task_runner/standard_task_runner.py", line 51, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.11/site-packages/***/task/task_runner/standard_task_runner.py", line 103, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/utils/cli.py", line 114, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/commands/task_command.py", line 441, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/commands/task_command.py", line 221, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.11/site-packages/***/cli/commands/task_command.py", line 300, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.11/site-packages/***/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/models/taskinstance.py", line 2479, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode, session=session)
+  File "/home/***/.local/lib/python3.11/site-packages/***/models/taskinstance.py", line 2676, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.11/site-packages/***/models/taskinstance.py", line 2701, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.11/site-packages/***/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.11/site-packages/***/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/***/.local/lib/python3.11/site-packages/***/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/***/dags/stress_detection_complete_pipeline.py", line 22, in retrieve_data_from_drive
+    from src.preprocess.fetch_and_store import retrieve_data
+  File "/opt/***/src/preprocess/__init__.py", line 5, in <module>
+    from .main_preprocess import main_preprocess
+  File "/opt/***/src/preprocess/main_preprocess.py", line 9, in <module>
+    from .encode_data import encode_data
+  File "/opt/***/src/preprocess/encode_data.py", line 1, in <module>
+    from sklearn.preprocessing import LabelEncoder
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/__init__.py", line 73, in <module>
+    from .base import clone  # noqa: E402
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/__init__.py", line 9, in <module>
+    from ._chunking import gen_batches, gen_even_slices
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from ._param_validation import Interval, validate_params
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 17, in <module>
+    from .validation import _is_arraylike_not_scalar
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 21, in <module>
+    from ..utils._array_api import _asarray_with_order, _is_numpy_namespace, get_namespace
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 20, in <module>
+    from .fixes import parse_version
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/fixes.py", line 421, in <module>
+    import pyarrow
+  File "/home/***/.local/lib/python3.11/site-packages/pyarrow/__init__.py", line 65, in <module>
+    import pyarrow.lib as _lib
+[2025-08-04T12:50:27.831+0700] {logging_mixin.py:188} WARNING - AttributeError: _ARRAY_API not found
+[2025-08-04T12:50:27.832+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-04T12:50:27.833+0700] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/stress_detection_complete_pipeline.py", line 22, in retrieve_data_from_drive
+    from src.preprocess.fetch_and_store import retrieve_data
+  File "/opt/airflow/src/preprocess/__init__.py", line 5, in <module>
+    from .main_preprocess import main_preprocess
+  File "/opt/airflow/src/preprocess/main_preprocess.py", line 9, in <module>
+    from .encode_data import encode_data
+  File "/opt/airflow/src/preprocess/encode_data.py", line 1, in <module>
+    from sklearn.preprocessing import LabelEncoder
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/__init__.py", line 73, in <module>
+    from .base import clone  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/__init__.py", line 9, in <module>
+    from ._chunking import gen_batches, gen_even_slices
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from ._param_validation import Interval, validate_params
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 17, in <module>
+    from .validation import _is_arraylike_not_scalar
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 21, in <module>
+    from ..utils._array_api import _asarray_with_order, _is_numpy_namespace, get_namespace
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 20, in <module>
+    from .fixes import parse_version
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/fixes.py", line 421, in <module>
+    import pyarrow
+  File "/home/airflow/.local/lib/python3.11/site-packages/pyarrow/__init__.py", line 65, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 36, in init pyarrow.lib
+ImportError: numpy.core.multiarray failed to import
+[2025-08-04T12:50:27.851+0700] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=stress_detection_complete_pipeline, task_id=retrieve_data_from_drive, run_id=manual__2025-08-04T05:45:20.659290+00:00, execution_date=20250804T054520, start_date=20250804T055024, end_date=20250804T055027
+[2025-08-04T12:50:27.863+0700] {standard_task_runner.py:110} ERROR - Failed to execute job 5 for task retrieve_data_from_drive (numpy.core.multiarray failed to import; 222)
+[2025-08-04T12:50:27.906+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-04T12:50:27.924+0700] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-04T12:50:27.928+0700] {local_task_job_runner.py:222} INFO - ::endgroup::

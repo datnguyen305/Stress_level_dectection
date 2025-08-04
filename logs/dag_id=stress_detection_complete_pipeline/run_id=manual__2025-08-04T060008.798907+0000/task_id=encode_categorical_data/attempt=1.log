@@ -1,0 +1,42 @@
+[2025-08-04T13:00:50.131+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-04T13:00:50.158+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.encode_categorical_data manual__2025-08-04T06:00:08.798907+00:00 [queued]>
+[2025-08-04T13:00:50.167+0700] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stress_detection_complete_pipeline.encode_categorical_data manual__2025-08-04T06:00:08.798907+00:00 [queued]>
+[2025-08-04T13:00:50.168+0700] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-04T13:00:50.182+0700] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): encode_categorical_data> on 2025-08-04 06:00:08.798907+00:00
+[2025-08-04T13:00:50.187+0700] {standard_task_runner.py:63} INFO - Started process 400 to run task
+[2025-08-04T13:00:50.190+0700] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'stress_detection_complete_pipeline', 'encode_categorical_data', 'manual__2025-08-04T06:00:08.798907+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/stress_detection_complete_pipeline.py', '--cfg-path', '/tmp/tmpn2jirfwe']
+[2025-08-04T13:00:50.193+0700] {standard_task_runner.py:91} INFO - Job 18: Subtask encode_categorical_data
+[2025-08-04T13:00:50.270+0700] {task_command.py:426} INFO - Running <TaskInstance: stress_detection_complete_pipeline.encode_categorical_data manual__2025-08-04T06:00:08.798907+00:00 [running]> on host 16f3fd804e12
+[2025-08-04T13:00:50.351+0700] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='stress_detection_complete_pipeline' AIRFLOW_CTX_TASK_ID='encode_categorical_data' AIRFLOW_CTX_EXECUTION_DATE='2025-08-04T06:00:08.798907+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-04T06:00:08.798907+00:00'
+[2025-08-04T13:00:50.354+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-04T13:00:51.195+0700] {logging_mixin.py:188} INFO - 🔄 Encoding categorical data...
+[2025-08-04T13:00:51.216+0700] {logging_mixin.py:188} WARNING - /opt/***/src/preprocess/encode_data.py:25 FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+[2025-08-04T13:00:51.225+0700] {logging_mixin.py:188} INFO - ✅ Categorical data encoded.
+[2025-08-04T13:00:51.227+0700] {logging_mixin.py:188} INFO - 💾 Saving final processed data...
+[2025-08-04T13:00:51.229+0700] {logging_mixin.py:188} INFO - gender                                int64
+academic_year                         int64
+major                                 int64
+class_attendance_percent              int64
+last_semester_GPA                     int64
+last_semester_student_ranking         int64
+self_study_hours                      int64
+activity_engagement_level             int64
+internet_adaptation                   int64
+amount_hours_spent_on_social_media    int64
+average_time_spent_sleeping           int64
+workout_rate                          int64
+peer_pressure_rate                    int64
+sharing_frequency                     int64
+family_affects                        int64
+family_allowance_sufficiency          int64
+family_major_support                  int64
+target                                int64
+dtype: object
+[2025-08-04T13:00:51.241+0700] {logging_mixin.py:188} INFO - Data saved to /opt/***/data/final_processed_data.csv
+[2025-08-04T13:00:51.242+0700] {logging_mixin.py:188} INFO - ✅ Final processed data saved.
+[2025-08-04T13:00:51.243+0700] {python.py:237} INFO - Done. Returned value was: {'gender_mapping': {'Nam': 0, 'Nữ': 1}, 'major_mapping': {'An toàn Thông tin': 0, 'Công nghệ Thông tin': 1, 'Hệ thống Thông tin': 2, 'Khoa học Dữ liệu': 3, 'Khoa học Máy tính': 4, 'Kỹ thuật Máy tính': 5, 'Kỹ thuật Phần mềm': 6, 'Mạng Máy tính': 7, 'Thiết kế Vi mạch': 8, 'Thương mại Điện tử': 9, 'Trí tuệ Nhân tạo': 10}, 'final_shape': (290, 18)}
+[2025-08-04T13:00:51.244+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-04T13:00:51.299+0700] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=stress_detection_complete_pipeline, task_id=encode_categorical_data, run_id=manual__2025-08-04T06:00:08.798907+00:00, execution_date=20250804T060008, start_date=20250804T060050, end_date=20250804T060051
+[2025-08-04T13:00:51.377+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-04T13:00:51.401+0700] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-04T13:00:51.405+0700] {local_task_job_runner.py:222} INFO - ::endgroup::
