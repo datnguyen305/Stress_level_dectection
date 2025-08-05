@@ -1,4 +1,4 @@
-# Stress Level Detection For UIT Undergrates
+# Stress Level Detection For UIT Undergraduates
 
 ## 📋 Project Overview 
 
