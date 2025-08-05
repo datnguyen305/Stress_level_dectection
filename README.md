@@ -126,15 +126,15 @@ This project is developed for educational and research purposes. Please contact 
 
 ## 👥 Team
 
-- **Developer**: Nguyen Tien Dat (ID: 23520262)
-- **Institution**: [University Name]
-- **Course**: Data Science/Machine Learning
+- **Developer**: Nguyễn Tiến Đạt (ID: 23520262), Đặng Hoàng Gia Khiêm (ID: 23520728 ), Trần Linh Chi (ID: 22520154)
+- **Institution**: VNUHCM - UIT (University of Information Technology) 
+- **Course**: DS108 (Build And Preprocess Dataset), DS102 (Statistical Machine Learning)
 
 ## 🔮 Future Enhancements
 
-- Advanced ML models (ensemble methods, deep learning)
+- Advanced ML models (deep learning)
+- Project deployment
 
----
 
 **⚠️ Disclaimer**: This system is designed for research and educational purposes. It should not replace professional mental health assessment or treatment. If you or someone you know is experiencing mental health crisis, please contact local emergency services or mental health professionals immediately.
 
