@@ -88,21 +88,21 @@ raw_data.xlsx → processed_data.csv → final_processed_data.csv
 
 ```
 stress_level_detection/
-├── dags/                          # Airflow DAG definitions
+├── dags/                          
 │   └── stress_detection_complete_pipeline.py
-├── data/                          # Data storage
-│   ├── raw_data.xlsx             # Input dataset
-│   ├── processed_data.csv        # Intermediate processed data
-│   └── final_processed_data.csv  # ML-ready dataset
-├── src/                          # Source code modules
-│   ├── preprocess/               # Data preprocessing utilities
-│   ├── eda/                      # Exploratory data analysis
-│   └── utils/                    # Helper functions
-├── logs/                         # Airflow execution logs
-├── docker-compose.yml            # Container orchestration
-├── Dockerfile                    # Custom image configuration
-├── requirements.txt              # Python dependencies
-└── README.md                     # Project documentation
+├── data/                          
+│   ├── raw_data.xlsx             
+│   ├── processed_data.csv        
+│   └── final_processed_data.csv  
+├── src/                          
+│   ├── preprocess/               
+│   ├── eda/                      
+│   └── utils/                    
+├── logs/                         
+├── docker-compose.yml            
+├── Dockerfile                    
+├── requirements.txt              
+└── README.md                     
 ```
 
 ## 🔬 Methodology
