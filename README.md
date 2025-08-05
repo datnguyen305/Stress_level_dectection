@@ -20,7 +20,7 @@ Mental health challenges, including stress and burnout, have become increasingly
 The project follows a comprehensive data science workflow:
 
 ```
-Paper Survey → Data Collection → Preprocessing → Exploratory Data Analysis → Feature Engineering → Model Training -> Evaluating
+Paper Survey → Data Collection → Preprocessing → Exploratory Data Analysis → Feature Engineering → Model Training → Evaluating
 ```
 
 ### 🛠️ Technology Stack
@@ -30,6 +30,13 @@ Paper Survey → Data Collection → Preprocessing → Exploratory Data Analysis
 - **Data Processing**: pandas, NumPy
 - **Machine Learning & Model Evaluating**: scikit-learn, AUC, ROC, F1, log-loss, DET
 - **Programming Language**: Python
+
+## 📰 Paper Survey
+**News Sourcing**: Assessing the feasibility of collecting news articles from well-known Vietnamese sources such as Tuổi Trẻ, VietNamNet, and VnExpress.
+
+**Perceived Stress Scale** [1]: Utilizing score scale to evaluate stress level of each individuals, max score = 40, the higher score means higher anxiety
+
+**Feature Identification**:  Refer Kaggle's Student Dataset and consult with the experts.
 
 ## 📊 Data Pipeline
 
@@ -141,3 +148,4 @@ This project is developed for educational and research purposes. Please contact 
 ## References
 
 1. Cohen, S., Kamarck, T., & Mermelstein, R. (1983). *Perceived Stress Scale*. New Hampshire Department of Administrative Services. Retrieved from [https://www.das.nh.gov/wellness/docs/percieved%20stress%20scale.pdf](https://www.das.nh.gov/wellness/docs/percieved%20stress%20scale.pdf)
+2. BookingCare. (2024). *Bài test đánh giá lo âu, trầm cảm, stress DASS-21*. Retrieved from [https://bookingcare.vn/cam-nang/bai-test-danh-gia-lo-au--tram-cam--stress-dass-21-p177.html](https://bookingcare.vn/cam-nang/bai-test-danh-gia-lo-au--tram-cam--stress-dass-21-p177.html)
