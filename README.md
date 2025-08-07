@@ -56,6 +56,15 @@ The data processing pipeline consists of 8 main stages:
 raw_data.xlsx → processed_data.csv → final_processed_data.csv
 ```
 
+## 📊 Data Analysis & Visualization
+
+### Overall Analysis
+Our comprehensive data analysis provides insights into stress patterns among UIT undergraduates:
+
+![Overall Analysis](./photo/Overall%20Analysis.png)
+
+*Figure 1: Comprehensive overview of stress level distribution and key demographic patterns in the UIT student dataset*
+
 ## 🚀 Getting Started
 
 ### Installation & Setup
@@ -88,21 +97,23 @@ raw_data.xlsx → processed_data.csv → final_processed_data.csv
 
 ```
 stress_level_detection/
-├── dags/                          
+├── dags/                          # Airflow DAG definitions
 │   └── stress_detection_complete_pipeline.py
-├── data/                          
-│   ├── raw_data.xlsx             
-│   ├── processed_data.csv        
-│   └── final_processed_data.csv  
-├── src/                          
-│   ├── preprocess/               
-│   ├── eda/                      
-│   └── utils/                    
-├── logs/                         
-├── docker-compose.yml            
-├── Dockerfile                    
-├── requirements.txt              
-└── README.md                     
+├── data/                          # Data storage
+│   ├── raw_data.xlsx             # Original survey responses
+│   ├── processed_data.csv        # Intermediate processed data
+│   └── final_processed_data.csv  # ML-ready dataset
+├── photo/                         # Analysis visualizations
+│   └── Overall Analysis.png      # Comprehensive analysis overview
+├── src/                          # Source code modules
+│   ├── preprocess/               # Data preprocessing utilities
+│   ├── eda/                      # Exploratory data analysis
+│   └── utils/                    # Helper functions
+├── logs/                         # Airflow execution logs
+├── docker-compose.yml            # Container orchestration
+├── Dockerfile                    # Custom image configuration
+├── requirements.txt              # Python dependencies
+└── README.md                     # Project documentation
 ```
 
 ## 🔬 Methodology
