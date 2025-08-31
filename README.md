@@ -126,7 +126,33 @@ stress_level_detection/
 
 ### Model Development
 
-Điền dô bé ơi 
+1. **Model Selection & Hyperparameter Tuning**
+   - Choose the following models: **SVC, KNN, Decision Tree, CatBoost, LightGBM**.
+   - Perform hyperparameter optimization to find the best parameters for each model.
+
+2. **Training & Evaluation**
+   - Train the selected models on the dataset.
+   - Evaluate using **F1-weighted** score.
+   - Select the model that achieves the highest F1-weighted score.
+
+3. **Error Analysis**
+   - Analyze misclassification errors using:
+     - **Log-loss**
+     - **AUC-ROC**
+     - **DET-Curve**
+
+4. **Fine-tuning for Task Objective**
+   - Adjust the chosen model to:
+     - **Increase Recall**
+     - **Decrease Precision**
+   - Ensure the model aligns with the specific requirements of the problem.
+
+5. **Retraining**
+   - Retrain the fine-tuned model on the dataset.
+
+6. **Overfitting Evaluation**
+   - Assess overfitting using **Learning Curves**.
+
 
 
 
